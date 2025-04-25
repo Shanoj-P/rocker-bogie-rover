@@ -1,0 +1,19 @@
+<launch>
+  <arg name="world_pose" default="-x -0.5 -y 0 -z 1.5 -R 0 -P 0 -Y 0" doc="Pose to spawn the robot at"/>
+  <param name="robot_description" command="$(find xacro)/xacro $(find rover2_description)/urdf/rover2.xacro"/>
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model rover2 $(arg world_pose)"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value = "$(find rover2_description)/gazebo_environment/uneven_terrain1.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+    
+  </include>
+  <rosparam file="$(find rover2_description)/config/controller.yaml" command="load" />
+  <node pkg="controller_manager" type="spawner" name="controller_spawner" args="joint_state_controller  left_front_wheel_velocity_controller left_middle_wheel_velocity_controller left_rear_wheel_velocity_controller right_front_wheel_velocity_controller right_middle_wheel_velocity_controller right_rear_wheel_velocity_controller" />
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" />
+  <!-- <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" output="screen" /> -->
+  <node pkg="rviz" type="rviz" name="rviz" />
+</launch>

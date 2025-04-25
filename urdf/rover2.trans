@@ -1,0 +1,180 @@
+<?xml version="1.0" ?>
+<robot name="rover2" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<!-- <transmission name="Revolute 1_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Revolute_1">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 1_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission> -->
+
+<!-- <transmission name="Revolute 4_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Revolute_4">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 4_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission> -->
+
+<!-- <transmission name="Revolute 8_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Revolute_8">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 8_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission> -->
+
+<!-- <transmission name="Revolute 9_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Revolute_9">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 9_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission> -->
+
+<!-- <transmission name="Revolute 11_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Revolute_11">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 11_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission> -->
+
+<transmission name="Revolute 18_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheel_1_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 18_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Revolute 19_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheel_2_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 19_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Revolute 20_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheel_3_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 20_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Revolute 21_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheel_4_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 21_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Revolute 22_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheel_5_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 22_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Revolute 23_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="wheel_6_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 23_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<!-- 
+<transmission name="Revolute 25_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Revolute_25">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 25_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Revolute 36_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Revolute_36">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 36_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission> -->
+
+<!-- <transmission name="Slider 38_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Slider_38">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Slider 38_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Revolute 40_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Revolute_40">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 40_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Revolute 42_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Revolute_42">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Revolute 42_actr">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission> -->
+
+</robot>

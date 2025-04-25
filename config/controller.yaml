@@ -1,0 +1,77 @@
+# manipulator_controller:
+#   type: position_controllers/JointTrajectoryController
+#   joints:
+#     - Revolute_25
+#     - Revolute_36
+#   constraints:
+#     goal_time: 0.6  # Time to achieve the goal
+#   gains:
+#     Revolute_25: {p: 100.0, i: 0.01, d: 10.0}
+#     Revolute_36: {p: 100.0, i: 0.01, d: 10.0}
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+
+left_front_wheel_velocity_controller:
+  type: velocity_controllers/JointVelocityController
+  joint: "wheel_1_joint"  # Replace with your continuous joint name
+  pid: 
+    p: 1.0  # Proportional gain, tune these parameters based on your system
+    i: 0.0  # Integral gain
+    d: 0.0  # Derivative gain
+    i_clamp_min: -0.5  # Minimum integral clamping
+    i_clamp_max: 0.5   # Maximum integral clamping
+    antiwindup: true
+left_middle_wheel_velocity_controller:
+  type: velocity_controllers/JointVelocityController
+  joint: "wheel_2_joint"  # Replace with your continuous joint name
+  pid: 
+    p: 1.0  # Proportional gain, tune these parameters based on your system
+    i: 0.0  # Integral gain
+    d: 0.0  # Derivative gain
+    i_clamp_min: -0.5  # Minimum integral clamping
+    i_clamp_max: 0.5   # Maximum integral clamping
+    antiwindup: true
+left_rear_wheel_velocity_controller:
+  type: velocity_controllers/JointVelocityController
+  joint: "wheel_3_joint"  # Replace with your continuous joint name
+  pid: 
+    p: 1.0  # Proportional gain, tune these parameters based on your system
+    i: 0.0  # Integral gain
+    d: 0.0  # Derivative gain
+    i_clamp_min: -0.5  # Minimum integral clamping
+    i_clamp_max: 0.5   # Maximum integral clamping
+    antiwindup: true
+
+right_front_wheel_velocity_controller:
+  type: velocity_controllers/JointVelocityController
+  joint: "wheel_4_joint"  # Replace with your continuous joint name
+  pid: 
+    p: 1.0  # Proportional gain, tune these parameters based on your system
+    i: 0.0  # Integral gain
+    d: 0.0  # Derivative gain
+    i_clamp_min: -0.5  # Minimum integral clamping
+    i_clamp_max: 0.5   # Maximum integral clamping
+    antiwindup: true
+right_middle_wheel_velocity_controller:
+  type: velocity_controllers/JointVelocityController
+  joint: "wheel_5_joint"  # Replace with your continuous joint name
+  pid: 
+    p: 1.0  # Proportional gain, tune these parameters based on your system
+    i: 0.0  # Integral gain
+    d: 0.0  # Derivative gain
+    i_clamp_min: -0.5  # Minimum integral clamping
+    i_clamp_max: 0.5   # Maximum integral clamping
+    antiwindup: true
+right_rear_wheel_velocity_controller:
+  type: velocity_controllers/JointVelocityController
+  joint: "wheel_6_joint"  # Replace with your continuous joint name
+  pid: 
+    p: 1.0  # Proportional gain, tune these parameters based on your system
+    i: 0.0  # Integral gain
+    d: 0.0  # Derivative gain
+    i_clamp_min: -0.5  # Minimum integral clamping
+    i_clamp_max: 0.5   # Maximum integral clamping
+    antiwindup: true
+
